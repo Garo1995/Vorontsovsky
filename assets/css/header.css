@@ -1,0 +1,240 @@
+header{
+    width: 100%;
+    top: 32px;
+    position: fixed;
+    left: 0;
+    z-index: 91;
+
+}
+
+.header .container{
+    position: relative;
+}
+
+.header-main{
+    padding: 24px 48px;
+    background: rgba(244, 244, 244, 1);
+    border-radius: 40px 40px;
+
+}
+.logo{
+    width: 165px;
+}
+.header-cnt{
+    gap: 16px;
+}
+.open-menu{
+    padding: 15px 24px;
+    background: #ffffff;
+    cursor: pointer;
+    border-radius: 50px;
+    gap: 12px;
+    transition: 0.3s;
+
+}
+.open-menu:hover{
+    background: #DCDDDF;
+
+}
+.open-menu-line{
+    width: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    transition: 0.3s;
+}
+.open-menu-line span{
+    width: 100%;
+    display: block;
+    height: 2px;
+    background: rgba(38, 43, 49, 1);
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.open-menu span{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: rgba(38, 43, 49, 1);
+}
+
+
+.btn{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #ffffff;
+    width: max-content;
+    border-radius: 500px;
+    padding: 14px 24px;
+    background: rgba(191, 144, 118, 1);
+    transition: 0.3s;
+}
+.btn:hover{
+    background: #262B31;
+}
+
+.head-menu{
+    box-shadow: 4px 4px 30px 0px rgba(83, 99, 116, 0.3);
+    background: #FFFFFF;
+    width: 360px;
+    padding: 32px;
+    border-radius: 40px;
+    position: absolute;
+    top: 88px;
+    right: 53px;
+    z-index: 9991;
+    display: none;
+}
+.menu-opened{
+    display: block;
+}
+.head-menu ul{
+    gap: 4px;
+}
+.head-menu ul li{
+    display: flex;
+}
+.head-menu a{
+    width: 100%;
+    transition: 0.3s;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    color: rgba(0, 0, 0, 0.60);
+    padding: 16px 16px;
+    border-radius: 16px;
+}
+.head-menu a:hover{
+    background: rgba(244, 244, 244, 1);
+    color: rgba(51, 51, 51, 1);
+}
+
+@media (max-width: 1899px){
+    .header-main {
+        padding: 30px 30px 40px;
+    }
+    .head-menu {
+        right: 40px;
+    }
+}
+
+@media (max-width: 1599px){
+    .header-main {
+        border-radius: 24px 24px 0 0;
+        padding: 24px 20px 30px;
+    }
+
+    .head-menu {
+        width: 340px;
+        padding: 24px;
+        border-radius: 24px;
+        top: 113px;
+        right: 43px;
+    }
+
+
+    .head-menu a {
+        line-height: 16px;
+        padding: 10px;
+    }
+
+
+
+    .header-main {
+        padding: 20px 20px 30px;
+    }
+
+}
+
+@media (max-width: 1399px){
+    .head-fon-fix{
+        display: none;
+    }
+    .header-main{
+        background: #F4F4F4;
+
+    }
+    .open-menu {
+        padding: 10px 20px;
+        gap: 8px;
+    }
+    header{
+        position: relative;
+    }
+    .head-menu {
+        top: 0;
+    }
+}
+@media (max-width: 1199px){
+    .logo {
+        width: 120px;
+    }
+    header {
+        top: 12px;
+    }
+    .header-main {
+        padding: 15px 16px 15px;
+        background: #F4F4F4;
+        border-radius: 24px;
+    }
+
+    .open-menu span {
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .open-menu {
+        padding: 12px 17px;
+        gap: 8px;
+    }
+    .btn {
+        font-size: 14px;
+        line-height: 20px;
+        padding: 12px 20px;
+    }
+
+}
+@media (max-width: 1020px){
+    .header-cnt .btn{
+        display: none;
+    }
+    .open-menu>span{
+        display: none;
+    }
+    .open-menu {
+        padding: 10px;
+        width: 52px;
+        height: 52px;
+        justify-content: center;
+    }
+
+
+    .open-menu span{
+        position: relative;
+    }
+    .close-menu span:last-child{
+        display: none;
+    }
+    .close-menu span:nth-child(1){
+        transform: rotate(45deg);
+        top: 3px;
+    }
+    .close-menu span:nth-child(2){
+        transform: rotate(-45deg);
+        top: -3px;
+    }
+}
+
+@media (max-width: 570px){
+    .head-menu {
+        top: 87px;
+        position: fixed;
+        left: 0;
+        right: auto;
+        max-width: 100%;
+        height: 100%;
+        width: 100%;
+        border-radius: 24px 24px 0 0;
+        padding: 16px;
+    }
+}

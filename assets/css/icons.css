@@ -1,0 +1,11 @@
+
+
+.icon-botas{
+    content: url("../img/icons/botas.svg");
+    width: 24px;
+    height: 24px;
+}
+
+.icon-right{
+    content: url("../img/icons/arrow-right.svg");
+}

@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=d130909a-f4b5-453d-85f2-98a45f38ba0c&lang=ru_RU"></script>
+    <link rel="stylesheet" href="style.css">
+    <title></title>
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <div class="header-main G-align-center G-justify-between">
+            <a href="#" class="logo G-flex">
+                <img src="./assets/img/logo.svg" alt="logo">
+            </a>
+            <div class="header-cnt menu-scroll  G-align-center">
+                <div class="open-menu G-align-center">
+                    <div class="open-menu-line">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <span>Меню</span>
+                </div>
+                <a href="#floor-selection" class="btn G-center">Подобрать офис</a>
+            </div>
+        </div>
+
+        <div class="head-menu">
+            <ul class="menu-scroll G-flex-column">
+                <li><a href="#location">Локация</a></li>
+                <li><a href="#infrastructure">Инфраструктура</a></li>
+                <li><a href="#peculiarities">Особенности помещений</a></li>
+                <li><a href="#management">Управляющая компания</a></li>
+                <li><a href="#technologies">Технологии</a></li>
+                <li><a href="#for-investors">Инвесторам</a></li>
+                <li><a href="#about-developer">О девелопере</a></li>
+                <li><a href="#floor-selection">Подбор помещения</a></li>
+                <li><a href="#construction" class="menu-open-news">Новости</a></li>
+                <li><a href="#construction" class="construction-xod">Ход строительства</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+
+<section class="business-center">
+    <div class="container">
+        <div class="business-flex G-flex">
+            <div class="business-card">
+                <div class="swiper business-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="business-cnt">
+                               <div class="business-items G-align-center">
+                                   <div class="business-item G-align-center">
+                                       <span>6 мин</span>
+                                       <i class="icon-botas"></i>
+                                       <p>Калужская</p>
+                                   </div>
+                                   <div class="business-item G-align-center">
+                                       <span>3 мин</span>
+                                       <i class="icon-botas"></i>
+                                       <p>Воронцовская</p>
+                                   </div>
+                               </div>
+                               <div class="business-info">
+                                   <h1>Камерный бизнес-центр класса А</h1>
+                                   <h3>Воронцовского парка с панорамными окнами и вдали от магистралей</h3>
+                                    <button class="btn-arrow">
+                                        Записаться на просмотр
+                                        <span class="circle-arrow">
+                                            <i class="icon-right"></i>
+                                        </span>
+                                    </button>
+                               </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="business-cnt">
+                                <div class="business-items G-align-center">
+                                    <div class="business-item G-align-center">
+                                        <span>6 мин</span>
+                                        <i class="icon-botas"></i>
+                                        <p>Калужская</p>
+                                    </div>
+                                    <div class="business-item G-align-center">
+                                        <span>3 мин</span>
+                                        <i class="icon-botas"></i>
+                                        <p>Воронцовская</p>
+                                    </div>
+                                </div>
+                                <div class="business-info">
+                                    <h1>Камерный бизнес-центр класса А</h1>
+                                    <h3>Воронцовского парка с панорамными окнами и вдали от магистралей</h3>
+                                    <button class="btn-arrow">
+                                        Записаться на просмотр
+                                        <span class="circle-arrow">
+                                            <i class="icon-right"></i>
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="business-cnt">
+                                <div class="business-items G-align-center">
+                                    <div class="business-item G-align-center">
+                                        <span>6 мин</span>
+                                        <i class="icon-botas"></i>
+                                        <p>Калужская</p>
+                                    </div>
+                                    <div class="business-item G-align-center">
+                                        <span>3 мин</span>
+                                        <i class="icon-botas"></i>
+                                        <p>Воронцовская</p>
+                                    </div>
+                                </div>
+                                <div class="business-info">
+                                    <h1>Камерный бизнес-центр класса А</h1>
+                                    <h3>Воронцовского парка с панорамными окнами и вдали от магистралей</h3>
+                                    <button class="btn-arrow">
+                                        Записаться на просмотр
+                                        <span class="circle-arrow">
+                                            <i class="icon-right"></i>
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="business-pagination swiper-pagination"></div>
+            </div>
+            <div class="business-photo G-flex">
+                <img src="./assets/img/apartment.jpg" alt="apartment">
+            </div>
+        </div>
+
+        <div class="timer-wrapper">
+            <div class="timer-title">
+                <h3>Повышение цен 31 октября!</h3>
+                <p>Успей забронировать офис по лучшей цене</p>
+            </div>
+            <div class="timer">
+                <div class="time-box">
+                    <span id="days">00</span>
+                    <div class="time-label">дней</div>
+                </div>
+                <div class="colon">:</div>
+                <div class="time-box">
+                    <span id="hours">00</span>
+                    <div class="time-label">часов</div>
+                </div>
+                <div class="colon">:</div>
+                <div class="time-box">
+                    <span id="minutes">00</span>
+                    <div class="time-label">минут</div>
+                </div>
+                <div class="colon">:</div>
+                <div class="time-box">
+                    <span id="seconds">00</span>
+                    <div class="time-label">секунд</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="section-margin">
+    <div class="container">
+        <div class="global-title">
+            <h2>Спокойное место, чтобы работать и расти</h2>
+        </div>
+        <div class="peaceful-flex G-flex">
+            <div class="peaceful-photo G-flex">
+                <img src="./assets/img/vorontsovsky.jpg" alt="vorontsovsky">
+                <div class="peaceful-name">
+                    <h3>Тихо, как за городом</h3>
+                    <span class="title-line"></span>
+                    <p>За окнами — тишина, хотя до метро всего несколько минут,  а магазины, рестораны  и аптеки — совсем близко.</p>
+                </div>
+            </div>
+            <div class="near-house G-flex-wrap">
+                <div class="near-house-box">
+                    <div class="near-house-name">
+                        <img src="./assets/img/icons/huge-icon.svg" alt="huge">
+                        <h3>Рядом  с домом</h3>
+                    </div>
+                    <p>
+                        Юго-запад — комфортный район для жизни. Если хочется ходить на работу пешком —  в двух шагах множество жилых комплексов
+                    </p>
+                </div>
+                <div class="near-house-box">
+                    <div class="near-house-name">
+                        <img src="./assets/img/icons/district.svg" alt="district">
+                        <h3>Деловой квартал</h3>
+                    </div>
+                    <p>
+                        Рядом — несколько других бизнес-центров. Удобная локация, если нужно работать поближе  к партнёрам.
+                    </p>
+                </div>
+                <div class="near-house-photo G-flex">
+                    <img src="./assets/img/modern-minimalist.jpg" alt="minimalist">
+                    <div class="peaceful-name">
+                        <h3>С панорамным остеклением</h3>
+                        <span class="title-line"></span>
+                        <p>Вид на парк успокаивает и вдохновляет. У окон есть функция естественного проветривания, поэтому  в офисе всегда свежо.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<section class="section-margin">
+    <div class="container">
+        <div class="global-title">
+            <h2>все нужное — под рукой</h2>
+        </div>
+        <div class=" infrastructure-map ">
+            <div class="touchstart infrast-map-cnt">
+                <span class="close-filt-map"></span>
+
+                <ul id="category-list" class="G-flex-column">
+
+                </ul>
+            </div>
+            <div class="infrast-map-box">
+                <div class="zoom-map G-center open_modal" data-val="all-map">
+                    <i class="icon-zoom-map"></i>
+                </div>
+                <div class="map-icons G-flex-column">
+                    <div class="map-icons-zoom G-flex-column">
+                        <div class="zoom-map-minus">
+                            <i class="icon-minus"></i>
+                        </div>
+                        <div class="zoom-map-plus">
+                            <i class="icon-plus"></i>
+                        </div>
+
+                    </div>
+                    <div class="map-location G-center">
+                        <i class="icon-location"></i>
+                    </div>
+
+                </div>
+                <div id="map"></div>
+            </div>
+        </div>
+
+
+        <div class="cafes-flex G-flex">
+            <div class="cafes-box">
+                <div class="cafes-title G-align-center">
+                    <img src="./assets/img/icons/variants.svg" alt="variants">
+                    <h3>Кафе, аптеки
+                       <br> и магазины</h3>
+                </div>
+                <p>
+                    На первом этаже — лобби с комфортной зоной ожидания, кофе-поинтами и банкоматами, ресторан и торговая зона.
+                </p>
+            </div>
+            <div class="cafes-box">
+                <div class="cafes-title G-align-center">
+                    <img src="./assets/img/icons/dolly-flatbed.svg" alt="variants">
+                    <h3>Склады</h3>
+                </div>
+                <p>
+                    Прямо внутри бизнес-центра. Удобно, если у вас ритейл и нужно где-то хранить товар.
+                </p>
+            </div>
+            <div class="cafes-box">
+                <div class="cafes-title G-align-center">
+                    <img src="./assets/img/icons/cars.svg" alt="variants">
+                    <h3>Паркинг</h3>
+                </div>
+                <p>
+                    Подземный паркинг на 44 места и 11 гостевых машино-мест возле входа в здание.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="section-margin">
+    <div class="container">
+        <div class="global-title G-align-center G-justify-between">
+            <h2>особенности помещений</h2>
+            <p>Офисы для любого бизнеса  вне зависимости от размера и сферы</p>
+        </div>
+        <div class="features-grid G-flex-wrap">
+            <div class="features-box card-a">
+                <h3>Помещения от 28 до 500+ м²</h3>
+                <p>
+                    Есть и небольшие кабинеты, и огромные воркспейсы. Можно купить готовый блок, часть или вообще объединить сразу несколько.
+                </p>
+            </div>
+            <div class="features-box">
+                <h3>С учётом особых требований</h3>
+                <p>
+                    Есть вентиляция, естественное проветривание и отдельный вход — это важно для медицинских центров и кабинетов.
+                </p>
+            </div>
+            <div class="features-box">
+                <h3>Рабочая атмосфера и вау-виды</h3>
+                <p>
+                    На нижних этажах — уединённая и спокойная рабочая обстановка. На верхних — шикарные виды для тех, кому важно подчеркнуть статус.
+                </p>
+            </div>
+            <div class="features-photo">
+                <img src="./assets/img/features.jpg" alt="features">
+                <div class="peaceful-name">
+                    <h3>Тихо, как за городом</h3>
+                    <span class="title-line"></span>
+                    <p>За окнами — тишина, хотя до метро всего несколько минут,  а магазины, рестораны  и аптеки — совсем близко.</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<script src="assets/js/jquery-3.6.4.js"></script>
+<script src="assets/js/jquery.fancybox.js"></script>
+<script src="https://snipp.ru/cdn/maskedinput/jquery.maskedinput.min.js"></script>
+<script src="assets/js/swiper-bundle.min.js"></script>
+<script src="assets/js/floor.js"></script>
+<script src="assets/js/sliders.js"></script>
+<script src="assets/js/script.js"></script>
+<script src="assets/js/time.js"></script>
+<script src="assets/js/map.js"></script>
+
+
+
+<script>
+    $.mask.definitions['h'] = "[0|1|3|4|5|6|7|9]"
+    $(".mask-phone").mask("+7 (h99) 999-99-99");
+</script>
+
+<script>
+    const productsList = [
+        {
+            title: "Все",
+            category: "object",
+            icon: './assets/img/icons/dribbble.svg',
+            isAll: true,
+            points: []
+        },
+        {
+            title: "Парки",
+            category: "education",
+            icon: './assets/img/icons/park.svg',
+            isAll: false,
+
+            points: [
+                {title: "Парки 1", lat: 55.817863, lot: 37.740991},
+            ]
+        },
+        {
+            title: "Школы",
+            category: "food",
+            icon: './assets/img/icons/scool.svg',
+            isAll: false,
+
+            points: [
+                {title: "Школы 1", lat: 55.814863, lot: 37.740991},
+                {title: "Школы 2", lat: 55.816862, lot: 37.760941},
+            ]
+        },
+        {
+            title: "ВУЗы",
+            category: "mortarboard",
+            icon: './assets/img/icons/mortarboard.svg',
+            isAll: false,
+
+            points: [
+                {title: "ВУЗы 1", lat: 55.817868, lot: 37.770991},
+                {title: "ВУЗы 2", lat: 55.817868, lot: 37.760941},
+            ]
+        },
+        {
+            title: "Кафе и рестораны",
+            category: "cafe",
+            icon: './assets/img/icons/cafe.svg',
+            isAll: false,
+
+            points: [
+                {title: "Кафе и рестораны", lat: 55.813863, lot: 37.740991},
+                {title: "Кафе и рестораны", lat: 55.813812, lot: 37.770941},
+            ]
+        },
+        {
+            title: "Фитнес центры",
+            category: "services",
+            icon: './assets/img/icons/fitnes.svg',
+            isAll: false,
+
+            points: [
+                {title: "Фитнес центры 1", lat: 55.815863, lot: 37.752991},
+                {title: "Фитнес центры 2", lat: 55.813862, lot: 37.737941},
+            ]
+        },
+    ]
+
+    const homePageMa = new YandexMapConstructor({
+        mapContainerId: 'map',
+        isMultiSelect: true,
+        selectAllMode: 'removed'
+    })
+
+    let selectedList = []
+    const categoryListContainer = document.getElementById('category-list')
+
+    for (let i = 0; i < productsList.length; i++) {
+        let productItem = document.createElement('li')
+
+        productItem.innerHTML = `
+            <div class="map-icon"><img src="${productsList[i].icon}" alt="food"/></div>
+                        <div class="map-cnt-info G-align-center G-justify-between">
+                        <span>${productsList[i].title}</span>  <span class="check-li-act"></span>
+                        </div>
+        `
+        productItem.setAttribute('data-category', productsList[i].title)
+        productItem.addEventListener('click', function () {
+            const selectAll = productsList[i].isAll
+            const findItems = productsList.filter(x => !x.isAll)
+
+            if (selectAll) {
+                if (selectedList.length && selectedList.length === findItems.length) {
+                    selectedList = []
+                    homePageMa.changeCategory({category: productsList[i], selectedList, isSameFromParent: true})
+                    handleUpdateListItems(selectedList, false)
+
+                } else {
+                    selectedList = productsList.filter(x => !x.isAll)
+                    homePageMa.changeCategory({category: productsList[i], selectedList, disableIsSame: false})
+                    handleUpdateListItems(selectedList, selectAll)
+                }
+
+            } else {
+
+                const findItem = selectedList.find(x => x.title === productsList[i].title)
+                if (findItem) {
+                    selectedList = selectedList.filter(x => x.title !== productsList[i].title)
+                } else {
+                    selectedList.push(productsList[i])
+                }
+                homePageMa.changeCategory({category: productsList[i], selectedList})
+                handleUpdateListItems(selectedList, false)
+
+                if (selectedList.length === findItems.length) {
+                    const items = categoryListContainer.querySelectorAll('li')
+                    items[0].classList.add('map-act')
+                } else {
+                    items[0].classList.remove('map-act')
+                }
+            }
+
+        })
+        categoryListContainer.append(productItem)
+
+
+        document.querySelector('.zoom-map-plus').addEventListener('click', function () {
+            homePageMa.zoomIn()
+        })
+
+        document.querySelector('.zoom-map-minus').addEventListener('click', function () {
+            homePageMa.zoomOut()
+        })
+        document.querySelector('.map-location').addEventListener('click', function () {
+            homePageMa.resetToDefaultCenter()
+        })
+    }
+
+    const timeOut = setInterval(() => {
+        if (homePageMa.myMap) {
+            selectedList = productsList.filter(x => !x.isAll)
+            homePageMa.changeCategory({category: productsList[0], selectedList, isSameFromParent: false})
+            handleUpdateListItems(selectedList, true)
+            clearInterval(timeOut)
+        }
+    }, 100)
+
+    function handleUpdateListItems(category, selectAll) {
+        const items = categoryListContainer.querySelectorAll('li')
+        items.forEach((item) => {
+            const title = item.getAttribute('data-category')
+            const findItem = category.some(x => x.title === title)
+            if (findItem) {
+                item.classList.add('map-act')
+            } else {
+                item.classList.remove('map-act')
+            }
+        })
+
+        if (selectAll) {
+            items[0].classList.add('map-act')
+        } else {
+            items[0].classList.remove('map-act')
+        }
+    }
+</script>
+
+
+</body>
+</html>
+
+

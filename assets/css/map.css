@@ -1,0 +1,189 @@
+.infrastructure-map{
+    display: flex;
+    position: relative;
+}
+.infrast-map-box {
+    position: relative;
+    width: 100%;
+}
+.infrast-map-cnt {
+    max-width: 280px;
+    width: 100%;
+    border-radius: 40px;
+    padding: 32px;
+    z-index: 11;
+    background: rgba(51, 60, 70, 1);
+
+    position: absolute;
+    top: 32px;
+    left: 32px;
+}
+
+
+.infrast-map-cnt ul {
+    gap: 16px;
+}
+
+.infrast-map-cnt li {
+    gap: 8px;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: 100%;
+}
+
+
+.map-icons {
+    position: absolute;
+    top: 270px;
+    right: 16px;
+    gap: 8px;
+    z-index: 2;
+}
+
+
+.zoom-map-plus {
+    background: rgba(51, 60, 70, 1);
+
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 0 0 50% 50%;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.zoom-map-minus {
+    background: rgba(51, 60, 70, 1);
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 50% 50% 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+}
+
+.icon-plus {
+    content: url("../img/icons/plus.svg");
+    width: 24px;
+    height: 24px;
+}
+
+.icon-minus {
+    content: url("../img/icons/minus.svg");
+    width: 24px;
+    height: 24px;
+}
+
+.check-li-act{
+    width: 24px;
+    height: 24px;
+    transition: 0.3s;
+    position: relative;
+}
+
+
+.ymaps-2-1-79-copyrights-pane {
+    display: none !important;
+}
+.bs-point-circle{
+    background: #BEDC1C;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bs-point-custom{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    width: max-content;
+
+}
+.bs-point-custom .title{
+    border: 2px solid #BEDC1C;
+    background: #FEFFFA;
+    width: max-content;
+    height: 44px;
+    padding: 8px 24px;
+    gap: 8px;
+    border-radius: 44px;
+    color: #000000;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 100%;
+    white-space: nowrap;
+    display: none;
+}
+.bs-point-custom.hover .title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.map-icon {
+    max-width: 24px;
+    width: 100%;
+    height: 24px;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.map-icon img {
+    width: 100%;
+    height: 100%;
+    transition: 0.3s;
+    opacity: 0.3;
+}
+
+.map-cnt-info {
+    width: 100%;
+
+}
+.infrast-map-cnt li span {
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    color: rgba(255, 255, 255, 0.5);
+    position: relative;
+}
+
+.infrast-map-cnt .map-act  span{
+    color: #FFFFFF;
+}
+.infrast-map-cnt li .check-li-act:before{
+    content: url("../img/icons/check.svg");
+    position: absolute;
+    left: 3px;
+    top: 0;
+    opacity: 0;
+}
+.infrast-map-cnt .map-act .check-li-act:before{
+    opacity: 1;
+}
+
+.infrast-map-cnt .map-act .map-icon img {
+    opacity: 1;
+}
+
+#map {
+    width: 100%;
+    height: 620px;
+    border-radius: 40px;
+    overflow: hidden;
+}
+#map iframe{
+    width: 100%;
+}
