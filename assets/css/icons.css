@@ -9,3 +9,13 @@
 .icon-right{
     content: url("../img/icons/arrow-right.svg");
 }
+.slid-arrow-left{
+    content: url("../img/icons/slid-arrow-left.svg");
+}
+.slid-arrow-right{
+    content: url("../img/icons/slid-arrow-right.svg");
+}
+
+.location-map{
+    content: url("../img/icons/location-map.svg");
+}

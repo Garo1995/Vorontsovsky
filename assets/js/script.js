@@ -61,6 +61,53 @@ $(window).on('click', function (e) {
 
 
 
+$('.open_modal').on('click', function (e) {
+    e.preventDefault();
+    let attr = $(this).attr('data-val');
+    let modal = $('#' + attr);
+
+    modal.removeClass('out');
+    $('body').css({ overflow: 'hidden' });
+    modal.fadeIn();
+
+});
+
+$('.close').on('click', function () {
+    let prt = $(this).closest('.modal');
+    prt.addClass('out');
+
+    setTimeout(function () {
+        prt.fadeOut(200, function () {
+            // После fadeOut() — включаем scroll обратно
+            const anyOpen = $('.modal:visible').length > 0;
+
+
+            $('body').css({ overflow: 'visible' }); // ❗️без пробела
+        });
+    }, 100);
+});
+
+$(window).on('click', function (event) {
+    $('.modal').each(function () {
+        const modal = $(this);
+        const content = modal.find('.modal-content');
+
+        if (event.target === this || event.target === content[0]) {
+            modal.addClass('out');
+            setTimeout(function () {
+                modal.fadeOut(200, function () {
+                    const anyOpen = $('.modal:visible').length > 0;
+
+
+                    $('body').css({ overflow: 'visible' });
+                });
+            }, 100);
+        }
+    });
+});
+
+
+
 
 
 
