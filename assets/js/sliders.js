@@ -47,9 +47,26 @@ let constructDescSwiper = new Swiper(".construct-desc-slider", {
     spaceBetween: 16,
     slidesPerGroup: 1,
     speed: 600,
+
     navigation: {
         nextEl: ".construct-next",
         prevEl: ".construct-prev",
+    },
+
+    breakpoints: {
+
+        '1199': {
+            slidesPerView: 4,
+            slidesPerGroup: 1,
+        },
+        '570': {
+            slidesPerView: 3,
+            slidesPerGroup: 1,
+        },
+        '320': {
+            slidesPerView: 2,
+            slidesPerGroup: 1,
+        },
     },
 });
 

@@ -13,7 +13,7 @@ h2{
     font-family: 'Romul';
     font-weight: 400;
     font-size: 32px;
-    line-height: 120%;
+    line-height: 125%;
     color: #ffffff;
 
 }
@@ -718,8 +718,12 @@ p{
     display: flex;
     align-items: flex-end;
 }
+.ideal-invest .btn-arrow{
+    display: none;
+}
 .ideal-invest-flex{
     gap: 16px;
+    width: 100%;
 }
 .ideal-invest-href{
     width: calc(33.333333% - 9px);
@@ -749,6 +753,246 @@ p{
     background: rgba(191, 144, 118, 1);
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.floor-main{
+    width: 100%;
+    border-radius: 60px;
+    position: relative;
+    margin-top: -125px;
+}
+.floor-main-photo{
+    display: flex;
+    position: relative;
+
+}
+.floor-main-photo img{
+    border-radius: 40px 40px 0 0;
+}
+
+
+
+
+
+
+
+
+
+.floor-svg{
+    position: absolute;
+    top: 6px;
+    left: 31px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 9;
+}
+.floor-svg svg {
+    width: 100%;
+    height: 100%;
+}
+.floor-svg-box{
+    position: relative;
+    z-index: 3;
+    cursor: pointer;
+}
+.floor-svg-box path{
+    transition: 0.3s;
+    fill: rgba(191, 144, 118, 0.5);
+    fill-opacity: 0.6;
+}
+.floor-svg-box:hover path{
+    transition: 0.3s;
+    fill-opacity: 0.8;
+    fill: rgba(191, 144, 118, 0.7);
+}
+
+
+.active-floor path{
+    transition: 0.3s;
+    fill-opacity: 0.65;
+}
+
+.active-floor polygon{
+    transition: 0.3s;
+    fill-opacity: 0.65;
+}
+
+
+
+
+
+
+.floor-box{
+    backdrop-filter: blur(10px);
+    background: rgba(51, 60, 70, 0.8);
+    max-width: 400px;
+    width: 100%;
+    gap: 24px;
+    border-radius: 40px;
+    padding: 40px;
+    position: absolute;
+    left: 32px;
+    z-index: 9;
+    bottom: 130px;
+}
+
+.floor-count-gap{
+    gap: 11px;
+}
+.floor-count{
+    width: 43px;
+    text-align: center;
+}
+.cost-premises-gap{
+    gap: 11px;
+}
+.cost-premises-gap span{
+    display: block;
+}
+.floor-box strong{
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    display: block;
+}
+.floor-card-info{
+    gap: 32px;
+}
+.floor-price-mobile{
+    display: none;
+}
+.floor-price span{
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 34px;
+    text-align: left;
+}
+.floor-price p{
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 22px;
+    margin-top: 8px;
+}
+.floor-selection-fon{
+    margin-top: 32px;
+    width: 100%;
+    z-index: 2;
+    border: 2px solid rgba(191, 144, 118, 1);
+    background: unset;
+    border-radius: 50px;
+}
+.floor-selection-cnt{
+    padding: 40px 48px;
+}
+.floor-selection-count ul{
+    gap: 11px;
+}
+.floor-selection-count ul li{
+    transition: 0.3s;
+    color: #FFFFFF26;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 100%;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    width: 46px;
+    height: 43px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2px;
+    pointer-events: none;
+}
+.floor-selection-count ul li:hover{
+    border: 2px solid rgba(191, 144, 118, 1);
+    background: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.6);
+}
+.floor-selection-count ul .floor-sel{
+    color: #FFFFFF99;
+    pointer-events: unset;
+
+}
+.floor-selection-count ul .active-btn{
+    border: 2px solid rgba(191, 144, 118, 1);
+    background: rgba(191, 144, 118, 1);
+    color: #FFFFFF;
+    pointer-events: unset;
+
+}
+.floor-selection-count ul .active-btn:hover{
+    border: 2px solid #C49D76;
+    background: #C49D76;
+    color: #FFFFFF;
+}
+
+
+.btn-white{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    white-space: nowrap;
+    width: max-content;
+    margin-top: 24px;
+    background: #FFFFFF;
+    padding: 14px 24px;
+    border-radius: 50px;
+    color: rgba(51, 60, 70, 1);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1115,3 +1359,554 @@ footer{
 
 
 
+
+
+
+
+
+
+@media (max-width: 1399px){
+    .business-center {
+        margin-top: 120px;
+    }
+    h1 {
+        font-size: 50px;
+    }
+    .business-info {
+        margin-top: 30px;
+        padding: 0 14px;
+    }
+    .business-item span, .business-item p {
+        font-size: 18px;
+    }
+    h3 {
+        font-size: 24px;
+    }
+    .timer-wrapper {
+        padding: 24px 24px;
+    }
+    .timer-title h3 {
+        font-size: 28px;
+        line-height: 30px;
+    }
+    p {
+        font-size: 20px;
+    }
+    h2 {
+        font-size: 28px;
+    }
+    .section-margin {
+        margin-top: 50px;
+    }
+    .global-title {
+        padding: 24px 0;
+        margin-bottom: 24px;
+    }
+    .near-house-box {
+        padding: 32px 24px;
+        min-height: 260px;
+        gap: 16px;
+    }
+    .peaceful-name {
+        padding: 0 18px 32px;
+    }
+    .near-house-photo .peaceful-name {
+        padding: 0 32px 32px;
+    }
+
+    .cafes-title img {
+        width: 55px;
+        height: 55px;
+    }
+    .cafes-box {
+        gap: 16px;
+    }
+
+    .features-box {
+        padding: 32px;
+    }
+    .card-white {
+        padding: 32px 24px;
+    }
+    .techno-info ul {
+        gap: 30px;
+    }
+    .techno-info li {
+        font-size: 20px;
+        line-height: 26px;
+    }
+    .techno-main {
+        padding: 32px 32px;
+    }
+    .techno-flex {
+        margin-top: 32px;
+        gap: 32px;
+    }
+    .investment-box strong {
+        font-size: 60px;
+    }
+    .investment-center .features-photo {
+        height: 520px;
+    }
+    .investment-box {
+        height: 252px;
+        padding: 32px 24px;
+    }
+
+    .ideal-invest {
+        padding: 32px;
+    }
+    .ideal-invest-href {
+        height: auto;
+        padding: 32px 32px;
+    }
+    .floor-main {
+        margin-top: -105px;
+    }
+
+    .floor-box {
+        max-width: 345px;
+        gap: 18px;
+        padding: 32px;
+        left: 20px;
+        bottom: 70px;
+    }
+
+    .floor-box strong {
+        font-size: 34px;
+    }
+    .floor-svg {
+        top: 4px;
+        left: 27px;
+    }
+
+
+    .floor-selection-cnt {
+        padding: 30px 10px;
+    }
+    .news-box {
+        padding: 32px 24px;
+    }
+    .construct-card-name h4 {
+        font-size: 24px;
+        line-height: 26px;
+    }
+    .construct-card {
+        height: 441px;
+        padding: 22px 16px 20px;
+    }
+
+    .arrow-slid-btn .swiper-button-prev, .arrow-slid-btn .swiper-button-next {
+        width: 72px;
+        height: 46px;
+        padding: 12px;
+    }
+
+
+    .footer-box {
+        max-width: 460px;
+        padding: 28px;
+        gap: 22px;
+    }
+    .sales-office-name span, .sales-office-name a {
+        font-size: 20px;
+        line-height: 22px;
+    }
+    .footer-menu ul li a {
+        padding: 0 12px 14px;
+    }
+
+
+
+}
+@media (max-width: 1299px){
+    .companies-card {
+        height: auto;
+    }
+    .footer-box {
+        max-width: 420px;
+        padding: 24px;
+    }
+
+
+}
+@media (max-width: 1199px){
+    .business-card {
+        padding: 24px 24px 65px;
+    }
+    .container {
+        padding: 0 16px;
+    }
+    h1 {
+        font-size: 40px;
+    }
+    .business-card {
+        padding: 16px 16px 56px;
+        border-radius: 24px;
+    }
+    .business-photo img {
+        border-radius: 30px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+    .peaceful-photo img {
+        border-radius: 24px;
+    }
+
+    .near-house-box {
+        padding: 24px 16px;
+        min-height: auto;
+        gap: 16px;
+        border-radius: 24px;
+        width: 100%;
+    }
+    .near-house-name img {
+        width: 32px;
+        height: 32px;
+    }
+    .near-house-photo {
+        height: 325px;
+        border-radius: 24px;
+    }
+    .near-house-photo .peaceful-name {
+        padding: 0 16px 32px;
+    }
+
+    .peaceful-photo:before {
+        border-radius: 24px;
+    }
+    .time-box{
+        width: 70px;
+    }
+
+    .infrast-map-cnt ul {
+        gap: 12px;
+    }
+    .cafes-box {
+        gap: 16px;
+        border-radius: 24px;
+        padding: 24px;
+    }
+    .cafes-title img {
+        width: 38px;
+        height: 38px;
+    }
+    h3 {
+        font-size: 20px;
+    }
+    .cafes-title h3 br{
+        display: none;
+    }
+    .cafes-title h3 {
+        font-size: 20px;
+    }
+    .cafes-flex {
+        margin-top: 20px;
+    }
+    p {
+        font-size: 18px;
+    }
+    .global-title {
+        align-items: flex-start;
+        gap: 8px 16px;
+        flex-wrap: wrap;
+    }
+    .global-title p {
+        text-align: left;
+        max-width: 750px;
+    }
+    .features-box {
+        padding: 32px 24px;
+        border-radius: 24px;
+        gap: 15px;
+    }
+    .features-photo {
+        height: 360px;
+        margin-top: -100px;
+    }
+    .features-box:nth-child(1) {
+        height: 255px;
+    }
+    .features-box:nth-child(3) {
+        height: 280px;
+    }
+    .features-photo {
+        height: 321px;
+        margin-top: -41px;
+    }
+    .features-photo:before {
+        border-radius: 24px;
+    }
+    .features-photo img {
+        border-radius: 24px;
+        width: 100%;
+    }
+
+    .card-orange {
+        padding: 32px 24px;
+        border-radius: 24px;
+    }
+    .companies-card img {
+        border-radius: 24px;
+    }
+    .card-white {
+        padding: 24px 16px;
+        border-radius: 24px;
+
+    }
+    .card-white P {
+        margin-top: 8px;
+    }
+    .techno-main {
+        padding: 32px 18px;
+        border-radius: 24px;
+    }
+    .techno-main h2 {
+        max-width: 509px;
+    }
+
+    .techno-info li {
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .techno-photo img {
+        border-radius: 24px;
+    }
+
+    .techno-rel {
+        max-width: 504px;
+    }
+    .techno-info ul {
+        gap: 16px;
+    }
+    .investment-box {
+        border-radius: 24px;
+        justify-content: center;
+    }
+    .peaceful-name p {
+        margin-top: 16px;
+    }
+    .global-title .btn-arrow{
+        display: none;
+    }
+    .ideal-invest .btn-arrow{
+        display: flex;
+    }
+    .ideal-invest {
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 16px;
+    }
+    .ideal-invest-href {
+        height: auto;
+        padding: 32px 24px;
+        border-radius: 24px;
+    }
+    .floor-box strong {
+        font-size: 32px;
+    }
+    .floor-price span {
+        font-size: 24px;
+        line-height: 30px;
+    }
+    .floor-price p {
+        font-size: 18px;
+        line-height: 18px;
+    }
+    .floor-card-info {
+        gap: 16px;
+    }
+   .floor-box .btn-white {
+        width: 100%;
+        margin-top: 0;
+    }
+    .floor-box {
+        max-width: 304px;
+        gap: 18px;
+        padding: 32px 24px;
+        left: 20px;
+        bottom: 60px;
+        border-radius: 24px;
+    }
+    .floor-main {
+        margin-top: -87px;
+    }
+    .floor-count {
+        width: 34px;
+    }
+    .floor-svg {
+        top: 5px;
+        left: 21px;
+    }
+
+
+    .floor-selection-cnt {
+        padding: 20px 0;
+    }
+    .floor-selection-count ul li {
+        font-size: 18px;
+        width: 34px;
+        height: 34px;
+    }
+    .floor-selection-count ul {
+        gap: 8px;
+        justify-content: center;
+    }
+    .construct-card {
+        height: 485px;
+        border-radius: 24px;
+    }
+    .news-box {
+        border-radius: 24px;
+    }
+    .sales-office-name span, .sales-office-name a {
+        font-size: 18px;
+    }
+    .footer-policy {
+        margin-top: 24px;
+    }
+    .footer-menu {
+        margin-top: 40px;
+    }
+    .footer-menu ul {
+        gap: 6px;
+    }
+    .footer-menu ul li a {
+        padding: 0 6px 12px;
+        font-size: 14px;
+    }
+    .sales-office {
+        gap: 16px;
+    }
+    .footer-box {
+        border-radius: 24px;
+    }
+    .near-house-photo img {
+        border-radius: 24px;
+    }
+    .business-item {
+        height: 32px;
+        padding: 6px 9px;
+    }
+}
+
+
+@media (max-width: 1020px) {
+    .business-flex {
+        flex-direction: column;
+    }
+    .business-card {
+        width: 100%;
+    }
+    .business-card {
+        padding: 30px 26px 56px;
+    }
+    .business-info {
+        max-width: 410px;
+        margin: 30px auto 0;
+    }
+    .business-info .btn-arrow {
+        margin-top: 24px;
+    }
+    .business-photo {
+        width: 100%;
+    }
+    .timer-wrapper {
+        padding: 24px 24px;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+    .timer-title h3 {
+        font-size: 24px;
+        line-height: 28px;
+        text-align: center;
+    }
+    .timer-title p{
+        text-align: center;
+    }
+    .timer-wrapper:before {
+        width: 259px;
+        border-radius: 20px 0 0 20px;
+        background-position: right;
+    }
+    .timer-wrapper {
+        border-radius: 24px;
+    }
+    .timer-wrapper:after {
+        border-radius: 0 20px 20px 0;
+    }
+    .peaceful-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+    .peaceful-photo {
+        max-width: 743px;
+    }
+
+    .cafes-box {
+        width: calc(50% - 8px);
+    }
+
+    .cafes-flex {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .features-grid .features-box {
+        height: auto;
+        width: 100%;
+    }
+    .features-photo {
+        height: 330px;
+        margin-top: 0;
+        width: 100%;
+    }
+    .card-orange {
+        width: 100%;
+    }
+    .companies-card:nth-child(4), .companies-card:nth-child(5) {
+        width: calc(50% - 9px);
+    }
+    .techno-flex {
+        margin-top: 18px;
+        gap: 24px;
+        flex-direction: column-reverse;
+    }
+    .techno-info {
+        max-width: 714px;
+    }
+    .techno-main:after {
+        height: 482px;
+        border-radius: 0 0 21px 21px;
+    }
+    .techno-rel {
+        max-width: 680px;
+    }
+    .investment-center {
+        flex-direction: column;
+    }
+
+    .investment-col {
+        max-width: 100%;
+    }
+    .investment-box strong {
+        font-size: 48px;
+    }
+    .investment-box {
+        height: auto;
+        padding: 48px 24px;
+    }
+    .investment-center .features-photo {
+        height: 507px;
+    }
+    .ideal-invest-flex {
+        flex-wrap: wrap;
+    }
+
+
+}
