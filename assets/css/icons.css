@@ -19,3 +19,6 @@
 .location-map{
     content: url("../img/icons/location-map.svg");
 }
+.arrow-move-right{
+    content: url("../img/icons/arrow-move-right.svg");
+}

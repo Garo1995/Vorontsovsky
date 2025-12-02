@@ -62,13 +62,26 @@ let constructDescSwiper = new Swiper(".construct-desc-slider", {
         '570': {
             slidesPerView: 3,
             slidesPerGroup: 1,
+            loop: true,
         },
         '320': {
             slidesPerView: 2,
             slidesPerGroup: 1,
+            loop: true,
+
         },
     },
 });
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -120,4 +133,22 @@ let galleryModalSwiper = new Swiper(".gallery-slider", {
         el: ".gallery-pagination",
         type: "fraction",
     }
+});
+
+
+
+
+
+
+
+let countSwiper = new Swiper(".floor-count-slider", {
+    slidesPerView: 1,
+    spaceBetween: 1,
+    slidesPerGroup: 1,
+
+    navigation: {
+        nextEl: ".floor-count-next",
+        prevEl: ".floor-count-prev",
+    },
+
 });

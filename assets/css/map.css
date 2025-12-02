@@ -213,6 +213,10 @@
 }
 
 
+.map-all-object{
+    display: none;
+}
+
 
 @media (max-width: 1399px){
     .infrast-map-cnt {
@@ -241,5 +245,122 @@
         border-radius: 24px;
     }
 
+}
 
+@media (max-width: 767px){
+
+    .map-all-object{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 100%;
+        color: rgba(255, 255, 255, 1);
+        padding: 16px;
+        background: rgba(0, 0, 0, 0.2);
+        height: 56px;
+        border-radius: 50px;
+        position: relative;
+        margin-top: 16px;
+        cursor: pointer;
+        transition: 0.3s;
+        margin-bottom: 16px;
+        gap: 8px;
+    }
+    .map-all-object:after {
+        content: "";
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        background-image: url(../img/icons/alt-arrow-left.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 24px;
+        height: 24px;
+        transition: 0.3s;
+    }
+    .infrast-map-cnt{
+        max-width: 100%;
+        position: fixed;
+        width: 100%;
+        padding: 8px 16px 24px;
+        height: auto;
+        bottom: 0;
+        top: auto;
+        left: 50%;
+        border-radius: 24px 24px 0 0;
+        transform: translateY(130%) translateX(-50%);
+        transition: transform 0.3s ease;
+        z-index: 9992;
+        background: #FEFFFA;
+        gap: 18px;
+    }
+    .touchstart-open{
+        transform: translateY(0%) translateX(-50%);
+    }
+    .infrast-map-cnt ul {
+        gap: 0;
+        margin-top: 8px;
+    }
+    .infrast-map-cnt li span {
+        color: rgba(51, 60, 70, 1);
+        font-weight: 400;
+        font-size: 18px;
+    }
+    .infrast-map-cnt li .check-li-act:before {
+
+        filter: brightness(0.5);
+    }
+    .infrast-map-cnt .map-act span {
+        color: rgba(51, 60, 70, 1);
+    }
+    .map-icon img {
+        opacity: 0.3;
+        filter: grayscale(1);
+    }
+    .infrast-map-cnt .map-act .map-icon img {
+        opacity: 1;
+        filter: unset;
+
+    }
+    .infrast-map-cnt ul {
+        gap: 4px;
+    }
+    .infrast-map-cnt li {
+        padding: 16px;
+        border-radius: 16px;
+        transition: 0.3s;
+    }
+    .infrast-map-cnt li.map-act {
+        background: rgba(244, 244, 244, 1);
+    }
+    .map-icons{
+        display: none;
+    }
+    #map {
+        height: 420px;
+    }
+    .get-directions {
+        bottom: 16px;
+        left: 16px;
+        width: calc(100% - 32px);
+    }
+}
+@media (max-width: 570px){
+    .time-box span {
+        font-size: 16px;
+    }
+    .time-label {
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    .timer-wrapper {
+        padding: 24px 20px;
+        gap: 22px;
+    }
+    #map {
+        height: 400px;
+    }
 }

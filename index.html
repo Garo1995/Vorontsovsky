@@ -41,14 +41,13 @@
                 <li><a href="#for-investors">Инвесторам</a></li>
                 <li><a href="#about-developer">О девелопере</a></li>
                 <li><a href="#floor-selection">Подбор помещения</a></li>
-                <li><a href="#construction" class="menu-open-news">Новости</a></li>
-                <li><a href="#construction" class="construction-xod">Ход строительства</a></li>
-                <li><a href="#contact">Контакты</a></li>
+                <li><a href="#construction">Ход строительства</a></li>
+                <li><a href="#news">Новости</a></li>
+                <li><a href="#footer">Контакты</a></li>
             </ul>
         </div>
     </div>
 </header>
-
 
 <section class="business-center">
     <div class="container">
@@ -73,7 +72,7 @@
                                <div class="business-info">
                                    <h1>Камерный бизнес-центр класса А</h1>
                                    <h3>Воронцовского парка с панорамными окнами и вдали от магистралей</h3>
-                                    <button class="btn-arrow">
+                                    <button data-modal-target="#modal-form" class="card btn-arrow">
                                         Записаться на просмотр
                                         <span class="circle-arrow">
                                             <i class="icon-right"></i>
@@ -99,7 +98,7 @@
                                 <div class="business-info">
                                     <h1>Камерный бизнес-центр класса А</h1>
                                     <h3>Воронцовского парка с панорамными окнами и вдали от магистралей</h3>
-                                    <button class="btn-arrow">
+                                    <button data-modal-target="#modal-form" class="card btn-arrow">
                                         Записаться на просмотр
                                         <span class="circle-arrow">
                                             <i class="icon-right"></i>
@@ -125,7 +124,7 @@
                                 <div class="business-info">
                                     <h1>Камерный бизнес-центр класса А</h1>
                                     <h3>Воронцовского парка с панорамными окнами и вдали от магистралей</h3>
-                                    <button class="btn-arrow">
+                                    <button data-modal-target="#modal-form" class="card btn-arrow">
                                         Записаться на просмотр
                                         <span class="circle-arrow">
                                             <i class="icon-right"></i>
@@ -172,10 +171,7 @@
         </div>
     </div>
 </section>
-
-
-
-<section class="section-margin">
+<section id="location" class="section-margin">
     <div class="container">
         <div class="global-title">
             <h2>Спокойное место, чтобы работать и расти</h2>
@@ -221,14 +217,17 @@
     </div>
 </section>
 
-<section class="section-margin">
+<section id="infrastructure" class="section-margin">
     <div class="container">
         <div class="global-title">
             <h2>все нужное — под рукой</h2>
         </div>
+        <div class="map-all-object"><img src="./assets/img/icons/dribbble.svg" alt="food"> Все объекты</div>
         <div class="infrastructure-map ">
             <div class="touchstart infrast-map-cnt">
-                <span class="close-filt-map"></span>
+                <div class="modal-drag-zone">
+                    <span class="close-filt-map"></span>
+                </div>
 
                 <ul id="category-list" class="G-flex-column">
 
@@ -293,7 +292,7 @@
     </div>
 </section>
 
-<section class="section-margin">
+<section id="peculiarities" class="section-margin">
     <div class="container">
         <div class="global-title G-align-center G-justify-between">
             <h2>особенности помещений</h2>
@@ -322,10 +321,10 @@
             <div class="features-photo">
                 <img src="./assets/img/features.jpg" alt="features">
                 <div class="peaceful-name">
-                    <h3>Тихо, как за городом</h3>
+                    <h3>Наши подрядчики помогут обостроить офис</h3>
                     <span class="title-line"></span>
                    <div class="quiet-out G-align-center">
-                       <p>За окнами — тишина, хотя до метро всего несколько минут,  а магазины, рестораны  и аптеки — совсем близко.</p>
+                       <p>Чтобы вы обустроили офис под себя. Если нужно — посоветуем проверенных подрядчиков. </p>
                        <a href="#" class="arrow-top-right"><i class="icon-right"></i></a>
                    </div>
                 </div>
@@ -335,7 +334,7 @@
 </section>
 
 
-<section class="section-margin">
+<section id="management" class="section-margin">
     <div class="container">
         <div class="global-title G-align-center G-justify-between">
             <h2>Управлять объектом будут лидеры среди УК по Москве</h2>
@@ -353,13 +352,13 @@
             <div class="companies-card G-flex">
                 <img src="./assets/img/img-hous.jpg" alt="features">
             </div>
-            <div class="companies-card card-white">
+            <div class="companies-card ">
                 <h3>Контроль <br> за порядком</h3>
                 <p>
                     Проследят за безопасностью и инженерными системами — не придётся думать о коммуналке, охране и ремонте.
                 </p>
             </div>
-            <div class="companies-card card-white">
+            <div class="companies-card ">
                 <h3>Уют и комфорт</h3>
                 <p>
                     Возьмут на себя бытовые вопросы: ресепшен, уборку и вызов сантехников, электриков и других специалистов
@@ -411,7 +410,7 @@
     </div>
 </section>
 
-<section class="section-margin">
+<section id="for-investors" class="section-margin">
     <div class="container">
         <div class="global-title">
             <h2>Идеально под инвестиции</h2>
@@ -439,12 +438,10 @@
     </div>
 </section>
 
-
-
-<section class="section-margin">
+<section id="about-developer" class="section-margin">
     <div class="container">
         <div class="global-title G-align-center G-justify-between">
-            <h2>Идеально под инвестиции</h2>
+            <h2>Проект от создателей афимолла</h2>
             <button class="btn-arrow">
                 Записаться на просмотр
                 <span class="circle-arrow">
@@ -478,18 +475,6 @@
 
     </div>
 </section>
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <section id="floor-selection" class="section-margin">
@@ -585,7 +570,43 @@
                 </div>
             </div>
 
+            <div class="apartment-mobile">
+                <img src="./assets/img/apartment-planshet.png" class="planshet-desc" alt="apartment">
+                <img src="./assets/img/apartment-mob.png" class="planshet-mob" alt="apartment">
+            </div>
+
             <div id="info-box" class="floor-box G-flex-column ">
+
+                <div class="floor-count-mobile">
+                    <div class="swiper floor-count-slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <strong>этаж 10</strong>
+                            </div>
+                            <div class="swiper-slide">
+                                <strong>этаж 12</strong>
+                            </div>
+                            <div class="swiper-slide">
+                                <strong>этаж 13</strong>
+                            </div>
+                            <div class="swiper-slide">
+                                <strong>этаж 14</strong>
+                            </div>
+                            <div class="swiper-slide">
+                                <strong>этаж 16</strong>
+                            </div>
+                            <div class="swiper-slide">
+                                <strong>этаж 18</strong>
+                            </div>
+                            <div class="swiper-slide">
+                                <strong>этаж 20</strong>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="floor-count-prev swiper-button-prev"></div>
+                    <div class="floor-count-next swiper-button-next"></div>
+                </div>
                 <div class="floor-count-gap G-align-center">
                     <strong>этаж</strong>
                     <strong class="floor-count"> 12</strong>
@@ -652,8 +673,7 @@
     </div>
 </section>
 
-
-<section class="section-margin">
+<section id="construction" class="section-margin">
     <div class="container">
         <div class="global-title G-align-center G-justify-between">
             <h2>Ход строительства</h2>
@@ -793,7 +813,7 @@
     </div>
 </section>
 
-<section class="section-margin">
+<section id="news" class="section-margin">
     <div class="container">
         <div class="global-title G-align-center G-justify-between">
             <h2>Новости</h2>
@@ -854,7 +874,6 @@
                             </p>
                         </div>
                     </div>
-
                     <div class="swiper-slide">
                         <div class="news-box">
                             <h3>24 года на рынке России</h3>
@@ -891,7 +910,62 @@
             </div>
         </div>
 
+        <div class="news-block-mobile">
+            <div class="news-block-wrap">
+                <div class="news-box">
+                    <h3>24 года на рынке России</h3>
+                    <p>
+                        Есть вентиляция, естественное проветривание и отдельный вход — это важно для медицинских центров и кабинетов кабинетовкабинетов а…
+                    </p>
+                </div>
+                <div class="news-box">
+                    <h3>24 года на рынке России</h3>
+                    <p>
+                        Есть вентиляция, естественное проветривание и отдельный вход — это важно для медицинских центров и кабинетов кабинетовкабинетов а…
+                    </p>
+                </div>
+                <div class="news-box">
+                    <h3>24 года на рынке России</h3>
+                    <p>
+                        Есть вентиляция, естественное проветривание и отдельный вход — это важно для медицинских центров и кабинетов кабинетовкабинетов а…
+                    </p>
+                </div>
+                <div class="news-box">
+                    <h3>24 года на рынке России</h3>
+                    <p>
+                        Есть вентиляция, естественное проветривание и отдельный вход — это важно для медицинских центров и кабинетов кабинетовкабинетов а…
+                    </p>
+                </div>
+                <div class="news-box">
+                    <h3>24 года на рынке России</h3>
+                    <p>
+                        Есть вентиляция, естественное проветривание и отдельный вход — это важно для медицинских центров и кабинетов кабинетовкабинетов а…
+                    </p>
+                </div>
+                <div class="news-box">
+                    <h3>24 года на рынке России</h3>
+                    <p>
+                        Есть вентиляция, естественное проветривание и отдельный вход — это важно для медицинских центров и кабинетов кабинетовкабинетов а…
+                    </p>
+                </div>
 
+                <div class="news-box">
+                    <h3>24 года на рынке России</h3>
+                    <p>
+                        Есть вентиляция, естественное проветривание и отдельный вход — это важно для медицинских центров и кабинетов кабинетовкабинетов а…
+                    </p>
+                </div>
+                <div class="news-box">
+                    <h3>24 года на рынке России</h3>
+                    <p>
+                        Есть вентиляция, естественное проветривание и отдельный вход — это важно для медицинских центров и кабинетов кабинетовкабинетов а…
+                    </p>
+                </div>
+            </div>
+            <div class="G-center">
+                <button class="see-more-news btn-white">Показать еще</button>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -929,15 +1003,15 @@
     <div class="footer-menu">
         <div class="container">
             <ul class="menu-scroll G-align-center G-justify-between">
-                <li><a href="#location">Локация</a></li>
-                <li><a href="#infrastructure">Инфраструктура</a></li>
-                <li><a href="#peculiarities">Особенности помещений</a></li>
-                <li><a href="#management">Управляющая компания</a></li>
-                <li><a href="#technologies">Технологии</a></li>
-                <li><a href="#for-investors">Инвесторам</a></li>
-                <li><a href="#about-developer">О девелопере</a></li>
-                <li><a href="#contact">Контакты</a></li>
-            </ul>
+                    <li><a href="#location">Локация</a></li>
+                    <li><a href="#infrastructure">Инфраструктура</a></li>
+                    <li><a href="#peculiarities">Особенности помещений</a></li>
+                    <li><a href="#management">Управляющая компания</a></li>
+                    <li><a href="#technologies">Технологии</a></li>
+                    <li><a href="#for-investors">Инвесторам</a></li>
+                    <li><a href="#about-developer">О девелопере</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
         </div>
     </div>
 
@@ -953,6 +1027,395 @@
 
 
 
+<div class="floor-plan">
+    <div class="container">
+        <div class="header-main G-align-center G-justify-between">
+                <div class="close-all-filter back-floor-sel"></div>
+                <a href="#" class="logo G-flex">
+                    <img src="./assets/img/logo.svg" alt="logo">
+                </a>
+                <div class="header-cnt menu-scroll  G-align-center">
+                    <div class="open-menu G-align-center">
+                        <div class="open-menu-line">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <span>Меню</span>
+                    </div>
+                    <a href="#floor-selection" class="btn G-center">Подобрать офис</a>
+                </div>
+            </div>
+
+        <div class="bread-caps-head">
+            <div class="bread-caps">
+                <ul>
+                    <li><a href="#">Главная</a></li>
+                    <li>Подбор по параметрам</li>
+                </ul>
+            </div>
+            <div class="go-floor-style go-back-floor ">
+                <i class="arrow-move-right"></i> назад
+            </div>
+        </div>
+
+
+        <div class="floor-plan-range G-align-center G-justify-between ">
+            <div class="floor-plan-fiv  G-align-end G-justify-between">
+                <div class="floor-plan-fixed">
+                    <span class="floor-plan-line"></span>
+                    <strong>Фильтр</strong>
+                    <div class="floor-plan-mobs G-align-center">
+
+                        <div class="filter-block">
+                            <h4>Этаж</h4>
+                            <div class="filter-box" data-min="1" data-max="25">
+                                <input type="number" class="min-input" value="10">
+                                <input type="number" class="max-input" value="21">
+                                <div class="range-wrapper">
+                                    <div class="range-base"></div>
+                                    <div class="range-fill"></div>
+
+                                    <input type="range" class="range-min" min="1" max="25" value="10">
+                                    <input type="range" class="range-max" min="1" max="25" value="21">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="filter-block">
+                            <h4>Площадь, м²</h4>
+                            <div class="filter-box" data-min="20" data-max="300">
+                                <input type="number" class="min-input" value="80">
+                                <input type="number" class="max-input" value="270">
+
+                                <div class="range-wrapper">
+                                    <div class="range-base"></div>
+                                    <div class="range-fill"></div>
+
+                                    <input type="range" class="range-min" min="20" max="300" value="80">
+                                    <input type="range" class="range-max" min="20" max="300" value="270">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="filter-block">
+                            <h4>Стоимость, млн ₽</h4>
+                            <div class="filter-box" data-min="1" data-max="100">
+                                <input type="number" class="min-input" step="0.1" value="11.5">
+                                <input type="number" class="max-input" step="0.1" value="100">
+
+                                <div class="range-wrapper">
+                                    <div class="range-base"></div>
+                                    <div class="range-fill"></div>
+
+                                    <input type="range" class="range-min" min="1" max="100" step="0.1" value="11.5">
+                                    <input type="range" class="range-max" min="1" max="100" step="0.1" value="100">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sort-floor G-align-center">
+                    <i class="icon-filter-arrow"></i>
+                    <span class="sort-floor-title">Сортировать</span>
+                </div>
+                <div class="open-filter-mobile">
+                    <i class="icon-filter"></i>
+                    <span>Фильтр</span>
+                    <i class="icon-rig-arrow"></i>
+                </div>
+
+
+                <div class="sort-floor-abs">
+                    <span class="floor-plan-line"></span>
+                    <strong class="sort-mod-title">Сортировать</strong>
+                    <div class="sort-floor-name">
+                        <strong>Этаж</strong>
+                        <label class="sort-check-radio">
+                            <small class="sort-check-name">В порядке возрастания</small>
+                            <input type="radio" name="sort">
+                            <span class="radiobtn"></span>
+                        </label>
+                        <label class="sort-check-radio">
+                            <small class="sort-check-name">В порядке убывания</small>
+                            <input type="radio" name="sort">
+                            <span class="radiobtn"></span>
+                        </label>
+                    </div>
+                    <div class="sort-floor-name">
+                        <strong>Площадь</strong>
+                        <label class="sort-check-radio">
+                            <small class="sort-check-name">С меньшей площадью</small>
+                            <input type="radio" name="sort">
+                            <span class="radiobtn"></span>
+                        </label>
+                        <label class="sort-check-radio">
+                            <small class="sort-check-name">С большей площадью</small>
+                            <input type="radio" name="sort">
+                            <span class="radiobtn"></span>
+                        </label>
+                    </div>
+                    <div class="sort-floor-name">
+                        <strong>Стоимость</strong>
+                        <label class="sort-check-radio">
+                            <small>Сначала дешевле</small>
+                            <input type="radio" name="sort">
+                            <span class="radiobtn"></span>
+                        </label>
+                        <label class="sort-check-radio">
+                            <small>Сначала дороже</small>
+                            <input type="radio" name="sort">
+                            <span class="radiobtn"></span>
+                        </label>
+                    </div>
+                </div>
+
+
+                <div class="real-estate-filter G-align-center">
+                    <ul>
+                        <li data-type="card" class="select-params params-active">
+                            <i class="icon-vandak"></i>
+                        </li>
+                        <li data-type="list" class="select-params">
+                            <i class="icon-vandal-line"></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="found-cnt-scroll">
+            <div class="found-cnt-flex G-flex-wrap">
+                <div class="found-cnt-box">
+                    <div class="found-cnt-photo G-center">
+                        <img src="./assets/img/floor.svg" alt="resource">
+                    </div>
+                    <div class="found-cnt-info">
+                        <h4>помещение 16/67</h4>
+                        <div class="found-cnt-btn G-align-center G-justify-between">
+                            <div class="found-cnt-href G-center">
+                                <img src="./assets/img/icon-floor.svg" alt="icon-floor">
+                                <span>Этаж: 21</span>
+                            </div>
+                            <div class="found-cnt-href G-center">
+                                <img src="./assets/img/ruler.svg" alt="ruler">
+                                <span>Площадь: 211 м²</span>
+                            </div>
+                        </div>
+                        <div class="found-cnt-item G-align-center G-justify-between">
+                            <div class="found-cnt-price G-flex-column G-align-start">
+                                <del>300 000 000</del>
+                                <span>211 000 000 ₽</span>
+                            </div>
+                            <span class="found-cnt-skid">-30%</span>
+                            <span class="arrow-top-rig">
+                               <i class="icon-right"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="found-cnt-box">
+                    <div class="found-cnt-photo G-center">
+                        <img src="./assets/img/floor.svg" alt="resource">
+                    </div>
+                    <div class="found-cnt-info">
+                        <h4>помещение 16/67</h4>
+                        <div class="found-cnt-btn G-align-center G-justify-between">
+                            <div class="found-cnt-href G-center">
+                                <img src="./assets/img/icon-floor.svg" alt="icon-floor">
+                                <span>Этаж: 21</span>
+                            </div>
+                            <div class="found-cnt-href G-center">
+                                <img src="./assets/img/ruler.svg" alt="ruler">
+                                <span>Площадь: 211 м²</span>
+                            </div>
+                        </div>
+                        <div class="found-cnt-item G-align-center G-justify-between">
+                            <div class="found-cnt-price G-flex-column G-align-start">
+                                <del>300 000 000</del>
+                                <span>211 000 000 ₽</span>
+                            </div>
+                            <span class="found-cnt-skid">-30%</span>
+                            <span class="arrow-top-rig">
+                               <i class="icon-right"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="found-cnt-box">
+                    <div class="found-cnt-photo G-center">
+                        <img src="./assets/img/floor.svg" alt="resource">
+                    </div>
+                    <div class="found-cnt-info">
+                        <h4>помещение 16/67</h4>
+                        <div class="found-cnt-btn G-align-center G-justify-between">
+                            <div class="found-cnt-href G-center">
+                                <img src="./assets/img/icon-floor.svg" alt="icon-floor">
+                                <span>Этаж: 21</span>
+                            </div>
+                            <div class="found-cnt-href G-center">
+                                <img src="./assets/img/ruler.svg" alt="ruler">
+                                <span>Площадь: 211 м²</span>
+                            </div>
+                        </div>
+                        <div class="found-cnt-item G-align-center G-justify-between">
+                            <div class="found-cnt-price G-flex-column G-align-start">
+                                <del>300 000 000</del>
+                                <span>211 000 000 ₽</span>
+                            </div>
+                            <span class="found-cnt-skid">-30%</span>
+                            <span class="arrow-top-rig">
+                               <i class="icon-right"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="found-cnt-box">
+                    <div class="found-cnt-photo G-center">
+                        <img src="./assets/img/floor.svg" alt="resource">
+                    </div>
+                    <div class="found-cnt-info">
+                        <h4>помещение 16/67</h4>
+                        <div class="found-cnt-btn G-align-center G-justify-between">
+                            <div class="found-cnt-href G-center">
+                                <img src="./assets/img/icon-floor.svg" alt="icon-floor">
+                                <span>Этаж: 21</span>
+                            </div>
+                            <div class="found-cnt-href G-center">
+                                <img src="./assets/img/ruler.svg" alt="ruler">
+                                <span>Площадь: 211 м²</span>
+                            </div>
+                        </div>
+                        <div class="found-cnt-item G-align-center G-justify-between">
+                            <div class="found-cnt-price G-flex-column G-align-start">
+                                <del>300 000 000</del>
+                                <span>211 000 000 ₽</span>
+                            </div>
+                            <span class="found-cnt-skid">-30%</span>
+                            <span class="arrow-top-rig">
+                               <i class="icon-right"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="found-cnt-box">
+                    <div class="found-cnt-photo G-center">
+                        <img src="./assets/img/floor.svg" alt="resource">
+                    </div>
+                    <div class="found-cnt-info">
+                        <h4>помещение 16/67</h4>
+                        <div class="found-cnt-btn G-align-center G-justify-between">
+                            <div class="found-cnt-href G-center">
+                                <img src="./assets/img/icon-floor.svg" alt="icon-floor">
+                                <span>Этаж: 21</span>
+                            </div>
+                            <div class="found-cnt-href G-center">
+                                <img src="./assets/img/ruler.svg" alt="ruler">
+                                <span>Площадь: 211 м²</span>
+                            </div>
+                        </div>
+                        <div class="found-cnt-item G-align-center G-justify-between">
+                            <div class="found-cnt-price G-flex-column G-align-start">
+                                <del>300 000 000</del>
+                                <span>211 000 000 ₽</span>
+                            </div>
+                            <span class="found-cnt-skid">-30%</span>
+                            <span class="arrow-top-rig">
+                               <i class="icon-right"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="found-cnt-box">
+                    <div class="found-cnt-photo G-center">
+                        <img src="./assets/img/floor.svg" alt="resource">
+                    </div>
+                    <div class="found-cnt-info">
+                        <h4>помещение 16/67</h4>
+                        <div class="found-cnt-btn G-align-center G-justify-between">
+                            <div class="found-cnt-href G-center">
+                                <img src="./assets/img/icon-floor.svg" alt="icon-floor">
+                                <span>Этаж: 21</span>
+                            </div>
+                            <div class="found-cnt-href G-center">
+                                <img src="./assets/img/ruler.svg" alt="ruler">
+                                <span>Площадь: 211 м²</span>
+                            </div>
+                        </div>
+                        <div class="found-cnt-item G-align-center G-justify-between">
+                            <div class="found-cnt-price G-flex-column G-align-start">
+                                <del>300 000 000</del>
+                                <span>211 000 000 ₽</span>
+                            </div>
+                            <span class="found-cnt-skid">-30%</span>
+                            <span class="arrow-top-rig">
+                               <i class="icon-right"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="found-cnt-box">
+                    <div class="found-cnt-photo G-center">
+                        <img src="./assets/img/floor.svg" alt="resource">
+                    </div>
+                    <div class="found-cnt-info">
+                        <h4>помещение 16/67</h4>
+                        <div class="found-cnt-btn G-align-center G-justify-between">
+                            <div class="found-cnt-href G-center">
+                                <img src="./assets/img/icon-floor.svg" alt="icon-floor">
+                                <span>Этаж: 21</span>
+                            </div>
+                            <div class="found-cnt-href G-center">
+                                <img src="./assets/img/ruler.svg" alt="ruler">
+                                <span>Площадь: 211 м²</span>
+                            </div>
+                        </div>
+                        <div class="found-cnt-item G-align-center G-justify-between">
+                            <div class="found-cnt-price G-flex-column G-align-start">
+                                <del>300 000 000</del>
+                                <span>211 000 000 ₽</span>
+                            </div>
+                            <span class="found-cnt-skid">-30%</span>
+                            <span class="arrow-top-rig">
+                               <i class="icon-right"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="found-cnt-box">
+                    <div class="found-cnt-photo G-center">
+                        <img src="./assets/img/floor.svg" alt="resource">
+                    </div>
+                    <div class="found-cnt-info">
+                        <h4>помещение 16/67</h4>
+                        <div class="found-cnt-btn G-align-center G-justify-between">
+                            <div class="found-cnt-href G-center">
+                                <img src="./assets/img/icon-floor.svg" alt="icon-floor">
+                                <span>Этаж: 21</span>
+                            </div>
+                            <div class="found-cnt-href G-center">
+                                <img src="./assets/img/ruler.svg" alt="ruler">
+                                <span>Площадь: 211 м²</span>
+                            </div>
+                        </div>
+                        <div class="found-cnt-item G-align-center G-justify-between">
+                            <div class="found-cnt-price G-flex-column G-align-start">
+                                <del>300 000 000</del>
+                                <span>211 000 000 ₽</span>
+                            </div>
+                            <span class="found-cnt-skid">-30%</span>
+                            <span class="arrow-top-rig">
+                               <i class="icon-right"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
 
 
 
@@ -960,24 +1423,96 @@
 
 
 
+<div id="modal-form" class="modal-overlay">
 
+    <div class="touchstart modal-form-main">
+        <div class="modal-close"></div>
+        <div class="modal-drag-zone">
+            <span class="close-filt-map"></span>
+        </div>
+        <h3>Оставьте заявку</h3>
+        <p>Мы поможем определиться с выбором направления по реализации задачи</p>
+        <div class="validate-form">
+            <form action="" method="post">
+                <div class="modal-inp">
+                    <label>
+                        <input type="text" placeholder="Ваше имя">
+                    </label>
+                </div>
+                <div class="modal-inp">
+                    <label>
+                        <input type="text" id="tel" name="tel"
+                               class="mask-phone required-phone" placeholder="+7 (___) ___-__-__">
+                    </label>
+                </div>
+                <div class="frame-select">
+                    <label>
+                        <select name="data-call" id="data-call">
+                            <option value="">Ближайшее время</option>
+                            <option value="">В ближайшее время</option>
+                            <option value="9:00-12:00">9:00-12:00</option>
+                            <option value="12:00-15:00">12:00-15:00</option>
+                            <option value="15:00-18:00">15:00-18:00</option>
+                            <option value="18:00-21:00">18:00-21:00</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="check-form">
+                    <label>
+                        <small>
+                            Я ознакомлен(-а) с <a href="#">Политикой обработки в отношении персональных данных</a> и даю
+                            свое
+                            <a href="#">согласие на обработку персональных данных</a>
+                        </small>
+                        <input type="checkbox" class="required-check">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="check-form">
+                    <label>
+                        <small>
+                            Даю свое
+                            <a href="#">согласие на получение рекламных материалов</a>
+                        </small>
+                        <input type="checkbox" class="required-check">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <button class="btn btn-submit disabled" disabled>Отправить заявку</button>
 
+            </form>
+        </div>
+    </div>
+</div>
 
+<div id="modal-thanks" class="modal-overlay">
 
+    <div class="touchstart modal-form-main">
+        <div class="modal-close"></div>
+        <div class="modal-drag-zone">
+            <span class="close-filt-map"></span>
+        </div>
+        <div class="leave-request G-flex-column G-align-start">
+            <h3>Спасибо</h3>
+            <p>Ваша заявка успешно принята, наши менеджеры скоро свяжутся с Вами</p>
+        </div>
+    </div>
 
-
-
+</div>
 
 
 
 
 <script src="assets/js/jquery-3.6.4.js"></script>
 <script src="assets/js/jquery.fancybox.js"></script>
+<script src="assets/js/jquery.formstyler.min.js"></script>
 <script src="https://snipp.ru/cdn/maskedinput/jquery.maskedinput.min.js"></script>
 <script src="assets/js/swiper-bundle.min.js"></script>
 <script src="assets/js/floor.js"></script>
 <script src="assets/js/sliders.js"></script>
 <script src="assets/js/script.js"></script>
+<script src="assets/js/form.js"></script>
+<script src="assets/js/range.js"></script>
 <script src="assets/js/time.js"></script>
 <script src="assets/js/map.js"></script>
 

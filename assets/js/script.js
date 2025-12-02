@@ -1,5 +1,9 @@
 
 $(document).ready(function () {
+
+    $('select').styler();
+
+
     $('.open-menu').on('click', function () {
         $(this).toggleClass('close-menu');
         if ($(this).hasClass('close-menu')) {
@@ -20,7 +24,9 @@ $(document).ready(function () {
 });
 
 
-
+$('.head-menu ul li a').on('click', function () {
+    $('.head-menu').removeClass('menu-opened');
+})
 
 $('.open-menu').on('click', function (e) {
     e.stopPropagation();
@@ -42,6 +48,9 @@ $(window).on('click', function (e) {
 
 
 
+$('.see-more-news').on('click', function () {
+    $('.news-block-mobile').toggleClass('news-block-opened');
+})
 
 
 
@@ -51,60 +60,181 @@ $(window).on('click', function (e) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-$('.open_modal').on('click', function (e) {
-    e.preventDefault();
+$('.open_modal').on('click', function () {
     let attr = $(this).attr('data-val');
     let modal = $('#' + attr);
-
     modal.removeClass('out');
-    $('body').css({ overflow: 'hidden' });
     modal.fadeIn();
-
+    $('body').addClass('body_fix');
 });
 
 $('.close').on('click', function () {
-    let prt = $(this).closest('.modal');
-    prt.addClass('out');
 
+    $('body').removeClass('body_fix');
+    let prt = $(this).parents('.modal');
+
+    prt.addClass('out')
     setTimeout(function () {
-        prt.fadeOut(200, function () {
-            // После fadeOut() — включаем scroll обратно
-            const anyOpen = $('.modal:visible').length > 0;
-
-
-            $('body').css({ overflow: 'visible' }); // ❗️без пробела
-        });
+        prt.fadeOut();
     }, 100);
 });
 
 $(window).on('click', function (event) {
+
+
     $('.modal').each(function () {
-        const modal = $(this);
-        const content = modal.find('.modal-content');
-
-        if (event.target === this || event.target === content[0]) {
-            modal.addClass('out');
+        let gtattr = $(this).attr('id');
+        let new_mod = $('#' + gtattr);
+        let md_cnt = $(new_mod).find('.modal-content');
+        if (event.target === $(md_cnt)[0]) {
             setTimeout(function () {
-                modal.fadeOut(200, function () {
-                    const anyOpen = $('.modal:visible').length > 0;
-
-
-                    $('body').css({ overflow: 'visible' });
-                });
-            }, 100);
+                $(new_mod).addClass('out');
+                $(new_mod).fadeOut()
+            }, 100)
+            $('body').removeClass('body_fix');
         }
+        if (event.target === this) {
+            setTimeout(function () {
+                $(new_mod).addClass('out');
+                $(new_mod).fadeOut()
+            }, 100)
+        }
+    })
+});
+
+
+
+
+
+
+
+$('.menu-scroll a').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+        && location.hostname == this.hostname) {
+        let $target = $(this.hash);
+        $target = $target.length && $target
+            || $('[name=' + this.hash.slice(1) +']');
+        if ($target.length) {
+            let targetOffset = $target.offset().top-130;
+            $('html,body')
+                .animate({scrollTop: targetOffset}, 1000);
+            return false;
+        }
+    }
+});
+
+
+
+
+
+
+
+$('.select-param').on('click', function () {
+    $('body').addClass('body-fixed');
+    $('.floor-plan').addClass('floor-plan-opened');
+    if (window.fullpage_api) {
+        fullpage_api.setAllowScrolling(false);
+        fullpage_api.setKeyboardScrolling(false);
+    }
+})
+
+
+
+
+
+
+
+document.querySelectorAll('.card').forEach(card => {
+    card.addEventListener('click', function() {
+
+        const modalSelector = this.dataset.modalTarget;
+        const modal = document.querySelector(modalSelector);
+        if (!modal) return;
+        document.body.classList.add('modal-open');
+        modal.classList.add('active');
     });
 });
+
+
+document.querySelectorAll('.modal-overlay').forEach(modal => {
+
+    const closeBtn = modal.querySelector('.modal-close');
+    if (closeBtn) {
+        closeBtn.addEventListener('click', () => {
+            closeModal(modal);
+        });
+    }
+
+    modal.addEventListener('click', (e) => {
+        const modalWindow = modal.querySelector('.modal-window');
+        if (e.target === modal) {
+            closeModal(modal);
+            return;
+        }
+
+        if (e.target === modalWindow) {
+            closeModal(modal);
+        }
+    });
+
+});
+
+
+function closeModal(modal) {
+    modal.classList.remove('active');
+    document.body.classList.remove('modal-open');
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+$('.map-all-object').on('click', function () {
+    $('.infrast-map-cnt').addClass('touchstart-open');
+    $('body').addClass('body-fon');
+})
+
+
+
+let startY = 0;
+let endY = 0;
+let threshold = 50;
+let canClose = false;
+
+$('.touchstart').on('touchstart', function (e) {
+    const isDragZone = $(e.target).closest('.modal-drag-zone').length > 0;
+
+    canClose = isDragZone;
+    startY = e.originalEvent.touches[0].clientY;
+});
+
+$('.touchstart').on('touchmove', function (e) {
+    endY = e.originalEvent.touches[0].clientY;
+});
+
+$('.touchstart').on('touchend', function () {
+
+    if (!canClose) return;
+
+    if (endY - startY > threshold) {
+        $(this).removeClass('touchstart-open');
+        $('body').removeClass('body-fon modal-open');
+        $('.modal-overlay').removeClass('active');
+        $('.select-property').removeClass('select-property-open');
+    }
+});
+
+
+
+
 
 
 
