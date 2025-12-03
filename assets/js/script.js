@@ -188,12 +188,44 @@ function closeModal(modal) {
 
 
 
+$('.back-floor-sel').on('click', function () {
+    $('body').removeClass('body-fixed');
+    $('.floor-plan').removeClass('floor-plan-opened');
+
+    // Проверяем: остались ли открытые модалки?
+    const anyOpen = $('.floor-plan.floor-plan-opened').length > 0;
+
+    if (!anyOpen && window.fullpage_api) {
+        fullpage_api.setAllowScrolling(true);
+        fullpage_api.setKeyboardScrolling(true);
+    }
+})
 
 
 
 
+document.addEventListener("DOMContentLoaded", () => {
+    const buttons = document.querySelectorAll(".select-params");
+    const views = document.querySelectorAll(".estate-view");
 
+    buttons.forEach(btn => {
+        btn.addEventListener("click", () => {
+            const type = btn.dataset.type;
 
+            // активная кнопка
+            buttons.forEach(b => b.classList.remove("params-active"));
+            btn.classList.add("params-active");
+
+            // показ нужного контента
+            views.forEach(view => {
+                view.classList.remove("active-view");
+                if (view.dataset.view === type) {
+                    view.classList.add("active-view");
+                }
+            });
+        });
+    });
+});
 
 
 

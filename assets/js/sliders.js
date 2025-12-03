@@ -152,3 +152,63 @@ let countSwiper = new Swiper(".floor-count-slider", {
     },
 
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let layoutSwiper = new Swiper(".layout-number-slider", {
+    spaceBetween: 10,
+    slidesPerView: 5,
+    direction: "vertical",
+    centeredSlides: true,
+    loop: true,
+    navigation: {
+        nextEl: ".layout-button-next",
+        prevEl: ".layout-button-prev",
+    },
+    breakpoints: {
+        1199: {
+            slidesPerView: 5,
+            slidesPerGroup: 1,
+        },
+        1020: {
+            slidesPerView: 5,
+            slidesPerGroup: 1,
+            direction: "horizontal",
+        },
+        320: {
+            direction: "horizontal",
+            slidesPerView: 5,
+            slidesPerGroup: 1,
+        },
+    },
+});
+
+let swiper2 = new Swiper(".select-layout-slider", {
+    spaceBetween: 10,
+    slidesPerView: 1,
+    effect: 'fade',
+    loop: true,
+    navigation: {
+        nextEl: ".layout-button-next",
+        prevEl: ".layout-button-prev",
+    },
+    thumbs: {
+        swiper: layoutSwiper,
+    },
+});
