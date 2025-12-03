@@ -1,5 +1,16 @@
 
 $(document).ready(function () {
+    setTimeout(function () {
+        $(".tagilskaya-sec").addClass("tagilskaya-act");
+    }, 900);
+    setTimeout(function () {
+        $('body').addClass("home-main-active");
+        // Через 600 мс после появления контента — плавное появление хедера
+    }, 2000);
+});
+
+
+$(document).ready(function () {
 
     $('select').styler();
 
@@ -129,6 +140,14 @@ $('.menu-scroll a').click(function() {
 
 
 
+
+
+
+
+
+
+
+
 $('.select-param').on('click', function () {
     $('body').addClass('body-fixed');
     $('.floor-plan').addClass('floor-plan-opened');
@@ -185,13 +204,41 @@ function closeModal(modal) {
     document.body.classList.remove('modal-open');
 }
 
+$('.open-floor-boxis').on('click', function () {
+    $('.floor-plan').addClass('floor-plan-none');
+    $('.floor-room-boxis').addClass('floor-room-opened');
+})
+$('.floor-svg-box').on('click', function () {
 
+    $('.floor-plan').addClass('floor-plan-none');
+    $('.floor-room-boxis').addClass('floor-room-opened');
+
+})
+$('.found-cnt-box').on('click', function () {
+
+    $('.floor-plan').addClass('floor-plan-none');
+    $('.floor-room-boxis').addClass('floor-room-opened');
+
+})
 
 
 $('.back-floor-sel').on('click', function () {
     $('body').removeClass('body-fixed');
     $('.floor-plan').removeClass('floor-plan-opened');
+    $('.floor-room-boxis').removeClass('floor-room-opened');
+    // Проверяем: остались ли открытые модалки?
+    const anyOpen = $('.floor-plan.floor-plan-opened').length > 0;
 
+    if (!anyOpen && window.fullpage_api) {
+        fullpage_api.setAllowScrolling(true);
+        fullpage_api.setKeyboardScrolling(true);
+    }
+})
+
+$('.back-select-layout').on('click', function() {
+    $('body').removeClass('body-fixed');
+    $('.floor-plan').removeClass('floor-plan-opened');
+    $('.floor-room-boxis').removeClass('floor-room-opened');
     // Проверяем: остались ли открытые модалки?
     const anyOpen = $('.floor-plan.floor-plan-opened').length > 0;
 
@@ -202,6 +249,11 @@ $('.back-floor-sel').on('click', function () {
 })
 
 
+$('.head-menu a').on('click', function() {
+    $('body').removeClass('body-fixed');
+    $('.floor-plan').removeClass('floor-plan-opened');
+    $('.floor-room-boxis').removeClass('floor-room-opened');
+})
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -272,5 +324,50 @@ $('.touchstart').on('touchend', function () {
 
 
 
+$(document).ready(function () {
+    $('.news-box').on('click', function () {
+        // Получаем данные из нажатого блока
+        const imgSrc = $(this).find('.get-news-photo').attr('src');
+        const title = $(this).find('.get-news-title').text();
+        const text = $(this).find('.get-news-text').text();
+
+        // Вставляем данные в окно
+        $('.add-news-photo').attr('src', imgSrc);
+        $('.add-news-title').text(title);
+        $('.add-news-text').text(text);
+
+        // Открытие окна (если оно скрыто, добавь свою логику)
+
+        $('.all-news-col').fadeIn(); // или .addClass('active'), если ты используешь CSS-модалки
+    });
+});
 
 
+
+
+
+
+
+
+
+$('.open-filter-mobile').on('click', function (e) {
+    e.stopPropagation();
+    $('.floor-plan-fixed').addClass('plan-fixed-open');
+
+});
+
+
+$('.floor-plan-fixed').on('touchstart', function (e) {
+    startY = e.originalEvent.touches[0].clientY;
+});
+
+$('.floor-plan-fixed').on('touchmove', function (e) {
+    endY = e.originalEvent.touches[0].clientY;
+});
+
+$('.floor-plan-fixed').on('touchend', function () {
+    if (endY - startY > threshold) {
+        $(this).removeClass('plan-fixed-open');
+        console.log('Свайп вниз — окно закрыто');
+    }
+});

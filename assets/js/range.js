@@ -88,6 +88,8 @@ $('.sort-floor').on('click', function (e) {
     $('.sort-floor-abs').toggleClass('sort-floor-abs-act');
 })
 
+
+
 $('.sort-floor-abs').on('touchstart', function (e) {
     startY = e.originalEvent.touches[0].clientY;
 });
