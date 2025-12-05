@@ -2065,12 +2065,24 @@
                 homePageMa.changeCategory({category: productsList[i], selectedList})
                 handleUpdateListItems(selectedList, false)
 
+
+
+                const items = categoryListContainer.querySelectorAll('li')
+
                 if (selectedList.length === findItems.length) {
-                    const items = categoryListContainer.querySelectorAll('li')
                     items[0].classList.add('map-act')
                 } else {
                     items[0].classList.remove('map-act')
                 }
+
+              /*  if (selectedList.length === findItems.length) {
+                    const items = categoryListContainer.querySelectorAll('li')
+                    items[0].classList.add('map-act')
+                } else {
+                    items[0].classList.remove('map-act')
+                }*/
+
+
             }
 
         })
