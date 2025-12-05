@@ -1,12 +1,48 @@
-// Устанавливаем таймер на 7 дней с момента загрузки страницы
-const timerBlock = document.querySelector(".timer");
+document.addEventListener("DOMContentLoaded", function () {
+    const timerBlock = document.querySelector(".timer");
+    if (!timerBlock) return; // нет таймера — выходим
 
-if (timerBlock) {
+    const deadlineStr = timerBlock.getAttribute("data-deadline");
+    if (!deadlineStr) return; // нет даты — выходим
 
-    const deadline = new Date().getTime() + (7 * 24 * 60 * 60 * 1000);
+    // Парсер даты: поддерживает "31.10.2025 23:59:59" и просто "31.10.2025"
+    function parseDeadline(str) {
+        const trimmed = str.trim();
+
+        // Если вдруг пришёл нормальный формат, который понимает Date.parse — сначала пробуем его
+        let ts = Date.parse(trimmed);
+        if (!isNaN(ts)) return ts;
+
+        // Формат "ДД.ММ.ГГГГ" или "ДД.ММ.ГГГГ ЧЧ:ММ" или "ДД.ММ.ГГГГ ЧЧ:ММ:СС"
+        const [datePart, timePart = "00:00:00"] = trimmed.split(" ");
+        const [dd, mm, yyyy] = datePart.split(".");
+
+        if (!dd || !mm || !yyyy) return NaN;
+
+        const [hh = "00", mi = "00", ss = "00"] = timePart.split(":");
+
+        return new Date(
+            Number(yyyy),
+            Number(mm) - 1,
+            Number(dd),
+            Number(hh),
+            Number(mi),
+            Number(ss)
+        ).getTime();
+    }
+
+    const deadline = parseDeadline(deadlineStr);
+    if (isNaN(deadline)) return; // кривая дата — тихо выходим, ничего не ломаем
+
+    const daysEl = document.getElementById("days");
+    const hoursEl = document.getElementById("hours");
+    const minutesEl = document.getElementById("minutes");
+    const secondsEl = document.getElementById("seconds");
+
+    if (!daysEl || !hoursEl || !minutesEl || !secondsEl) return;
 
     function updateTimer() {
-        const now = new Date().getTime();
+        const now = Date.now();
         const t = deadline - now;
 
         if (t <= 0) {
@@ -14,13 +50,6 @@ if (timerBlock) {
             clearInterval(timerInterval);
             return;
         }
-
-        const daysEl = document.getElementById("days");
-        const hoursEl = document.getElementById("hours");
-        const minutesEl = document.getElementById("minutes");
-        const secondsEl = document.getElementById("seconds");
-
-        if (!daysEl || !hoursEl || !minutesEl || !secondsEl) return;
 
         const days = Math.floor(t / (1000 * 60 * 60 * 24));
         const hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -35,4 +64,4 @@ if (timerBlock) {
 
     const timerInterval = setInterval(updateTimer, 1000);
     updateTimer();
-}
+});
