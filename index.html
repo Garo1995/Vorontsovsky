@@ -2057,15 +2057,16 @@
             } else {
 
                 const findItem = selectedList.find(x => x.title === productsList[i].title)
+                console.log(findItem)
                 if (findItem) {
                     selectedList = selectedList.filter(x => x.title !== productsList[i].title)
                 } else {
                     selectedList.push(productsList[i])
                 }
+                console.log(selectedList, 'selectedList')
+
                 homePageMa.changeCategory({category: productsList[i], selectedList})
                 handleUpdateListItems(selectedList, false)
-
-
 
                 const items = categoryListContainer.querySelectorAll('li')
 
@@ -2074,15 +2075,6 @@
                 } else {
                     items[0].classList.remove('map-act')
                 }
-
-              /*  if (selectedList.length === findItems.length) {
-                    const items = categoryListContainer.querySelectorAll('li')
-                    items[0].classList.add('map-act')
-                } else {
-                    items[0].classList.remove('map-act')
-                }*/
-
-
             }
 
         })

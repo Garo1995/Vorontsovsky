@@ -117,6 +117,8 @@ class YandexMapConstructor {
                        category, isClear, selectedList, isSameFromParent
                    }) {
 
+        console.log(category, selectedList, isSameFromParent);
+
         if (!this.myMap || !window.ymaps) return;
 
         const isSame = this.selectedCategory.some(x => x.title === category.title);
@@ -132,7 +134,7 @@ class YandexMapConstructor {
                     }
 
                 } else {
-                    this.selectedCategory = [category, ...selectedList]
+                    this.selectedCategory = selectedList
                 }
             } else {
                 this.selectedCategory = []
@@ -157,6 +159,8 @@ class YandexMapConstructor {
                 }
             }
         }
+
+        console.log(this.selectedCategory)
 
         this.#generateMarkersList()
         return this.selectedCategory
