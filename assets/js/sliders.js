@@ -12,16 +12,7 @@ let businessSwiper = new Swiper(".business-slider", {
 });
 
 
-let gallerySwiper = new Swiper(".gallery-slider", {
-    slidesPerView: 1,
-    spaceBetween: 10,
-    speed: 600,
-    navigation: {
-        nextEl: ".gallery-button-next",
-        prevEl: ".gallery-button-prev",
-    },
 
-});
 let technoSwiper = new Swiper(".techno-slider", {
     slidesPerView: 1,
     spaceBetween: 10,
@@ -121,20 +112,27 @@ let newsSwiper = new Swiper(".news-slider", {
 
 
 
-let galleryModalSwiper = new Swiper(".gallery-slider", {
-    slidesPerView: 1,
-    spaceBetween: 10,
-    speed: 600,
-    navigation: {
-        nextEl: ".gallery-button-next",
-        prevEl: ".gallery-button-prev",
-    },
-    pagination: {
-        el: ".gallery-pagination",
-        type: "fraction",
-    }
-});
+document.querySelectorAll(".gallery-slider").forEach((slider) => {
+    const parent = slider.closest(".modal-gallery");
 
+    const nextBtn = parent.querySelector(".gallery-button-next");
+    const prevBtn = parent.querySelector(".gallery-button-prev");
+    const pagination = parent.querySelector(".gallery-pagination");
+
+    new Swiper(slider, {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        speed: 600,
+        navigation: {
+            nextEl: nextBtn,
+            prevEl: prevBtn,
+        },
+        pagination: {
+            el: pagination,
+            type: "fraction",
+        },
+    });
+});
 
 
 
